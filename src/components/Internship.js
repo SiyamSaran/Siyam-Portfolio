@@ -9,7 +9,7 @@ const internships = [
     duration: "Aug 2024 - Sept 2024",
     description: "Worked on live projects involving ML models for classification and automation.",
     details: "Developed AI-driven solutions, optimized ML pipelines, and enhanced data preprocessing techniques.",
-    viewLink: "https://github.com/SiyamSaran/CodeAlpha" // Replace with actual link
+    viewLink: "https://github.com/SiyamSaran/CodeAlpha"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const internships = [
     duration: "Aug 2024 - Sept 2024",
     description: "Built predictive analytics models and enhanced AI-driven solutions.",
     details: "Worked on time-series forecasting, EDA, and implemented regression models to optimize predictions.",
-    viewLink: "https://github.com/SiyamSaran/OIBSIP" // Replace with actual link
+    viewLink: "https://github.com/SiyamSaran/OIBSIP"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const internships = [
     duration: "Oct 2024 - Dec 2024",
     description: "Developed AI algorithms for real-world applications, focusing on deep learning.",
     details: "Implemented neural networks using TensorFlow, explored generative AI models, and enhanced image recognition tasks.",
-    viewLink: "https://springboard.infosys.com/ai-internship" // Replace with actual link
+    viewLink: "https://springboard.infosys.com/ai-internship"
   },
 ];
 
@@ -47,7 +47,6 @@ const Internship = () => {
         color: "#fff",
         textAlign: "center",
         padding: "80px 20px",
-        animation: "gradientShift 10s infinite alternate ease-in-out"
       }}
     >
       <style>
@@ -55,6 +54,49 @@ const Internship = () => {
           @keyframes gradientShift {
             0% { background: linear-gradient(135deg, #0d0d0d, #1e1e3f, #0d0d0d); }
             100% { background: linear-gradient(135deg, #121212, #252545, #121212); }
+          }
+
+          @media (max-width: 992px) {
+            .row {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+
+            .col-lg-4 {
+              width: 90%;
+              display: flex;
+              justify-content: center;
+            }
+          }
+
+          @media (max-width: 600px) {
+            h2 {
+              font-size: 2.2rem;
+            }
+
+            .card {
+              max-width: 95%;
+              padding: 15px;
+              margin: 10px 0;
+            }
+
+            .card h4 {
+              font-size: 1.3rem;
+            }
+
+            .card h6 {
+              font-size: 1rem;
+            }
+
+            .card p {
+              font-size: 0.9rem;
+            }
+
+            .btn {
+              padding: 8px 15px;
+              font-size: 0.9rem;
+            }
           }
         `}
       </style>
@@ -69,7 +111,6 @@ const Internship = () => {
           }}
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           Internships
@@ -91,35 +132,17 @@ const Internship = () => {
                 overflow: "hidden",
                 cursor: "pointer",
               }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(168, 153, 250, 0.9)" }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
               initial={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(168, 153, 250, 0.9)" }}
               onClick={() => toggleExpand(intern.id)}
             >
-              {/* Glow Animation */}
-              <motion.div
-                style={{
-                  position: "absolute",
-                  width: "140%",
-                  height: "140%",
-                  background: "radial-gradient(circle, rgba(168,153,250,0.2) 10%, transparent 80%)",
-                  top: "-20%",
-                  left: "-20%",
-                  zIndex: -1,
-                  opacity: 0.6,
-                }}
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
-
               <h4 className="fw-bold" style={{ color: "#EEE" }}>{intern.role}</h4>
               <h6 style={{ color: "#A899FA", fontWeight: "bold" }}>{intern.company}</h6>
               <p style={{ color: "#bbb", fontSize: "0.9rem" }}>{intern.duration}</p>
               <p style={{ color: "#ddd", fontSize: "1rem" }}>{intern.description}</p>
 
-              {/* Expandable Details Section */}
               {expandedId === intern.id && (
                 <motion.div
                   style={{
@@ -135,7 +158,6 @@ const Internship = () => {
                 >
                   <p style={{ color: "#fff", fontSize: "0.9rem" }}>{intern.details}</p>
 
-                  {/* View Internship Link */}
                   <a
                     href={intern.viewLink}
                     target="_blank"
@@ -150,17 +172,13 @@ const Internship = () => {
                       textDecoration: "none",
                       fontWeight: "bold",
                       boxShadow: "0 0 10px rgba(168, 153, 250, 0.8)",
-                      transition: "0.3s",
                     }}
-                    onMouseEnter={(e) => (e.target.style.boxShadow = "0 0 15px rgba(168, 153, 250, 1)")}
-                    onMouseLeave={(e) => (e.target.style.boxShadow = "0 0 10px rgba(168, 153, 250, 0.8)")}
                   >
                     View Internship
                   </a>
                 </motion.div>
               )}
 
-              {/* Expand Button */}
               <motion.button
                 className="mt-3"
                 style={{
@@ -174,7 +192,6 @@ const Internship = () => {
                   boxShadow: "0 0 15px rgba(168, 153, 250, 0.8)",
                 }}
                 whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(168, 153, 250, 1)" }}
-                whileTap={{ scale: 0.95 }}
                 onClick={() => toggleExpand(intern.id)}
               >
                 {expandedId === intern.id ? "Show Less" : "Read More"}

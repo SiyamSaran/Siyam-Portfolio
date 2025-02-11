@@ -25,7 +25,7 @@ const projectData = [
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing projects and skills.",
     image: "https://plus.vtc.edu.vn/wp-content/uploads/2023/02/portfoli-la-gi.jpg",
-    link: "#",
+    link: "https://github.com/SiyamSaran/Siyam-Portfolio",
   },
 ];
 
@@ -192,8 +192,15 @@ const Projects = () => {
         {`
           @media (max-width: 992px) {
             .row {
-              flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center align the projects */
+            }
+            .col-lg-4 {
+              display: flex;
+              justify-content: center; /* Ensure equal spacing */
               align-items: center;
+              width: 100%; /* Make it full width on small screens */
             }
           }
 
@@ -203,6 +210,19 @@ const Projects = () => {
             }
             .card {
               max-width: 90%;
+              padding: 15px;
+            }
+            .card img {
+              height: 180px; /* Slightly reduce image height */
+            }
+
+            .card-body {
+              padding: 10px; /* Reduce padding inside card */
+             }
+
+            .btn {
+              padding: 8px 15px; /* Reduce button size */
+              font-size: 0.9rem;
             }
           }
         `}

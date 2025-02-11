@@ -160,7 +160,7 @@ const Hero = () => {
           }
 
           .hero-title {
-            font-size: 4rem;
+            font-size: 3rem;
             color: #ffffff;
             animation: slideIn 1s ease-in-out;
           }

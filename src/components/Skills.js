@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaReact, FaGithub, FaCloud, FaPython, FaDatabase,  FaFileExcel } from "react-icons/fa";
+import { FaReact, FaGithub, FaCloud, FaPython, FaDatabase, FaFileExcel } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skillsData = [
@@ -9,7 +9,7 @@ const skillsData = [
   { id: 3, name: "Git and GitHub", icon: <FaGithub color="#7952B3" />, level: 80, color: "#7952B3" },
   { id: 4, name: "Python", icon: <FaPython color="#3776AB" />, level: 88, color: "#3776AB" },
   { id: 5, name: "SQL & Databases", icon: <FaDatabase color="#F29111" />, level: 75, color: "#F29111" },
-  { id: 6, name: "Cloud Engineering", icon: <FaCloud color="#" />, level: 75, color: "#9111" }
+  { id: 6, name: "Cloud Engineering", icon: <FaCloud color="#" />, level: 75, color: "#" }
 ];
 
 const Skills = () => {
@@ -45,14 +45,15 @@ const Skills = () => {
           {skillsData.map((skill, index) => (
             <motion.div
               key={skill.id}
-              className="col-12 col-sm-6 col-md-5 col-lg-4 d-flex align-items-center justify-content-between p-3"
+              className="col-6 col-md-5 col-lg-4 d-flex align-items-center justify-content-between p-2 skill-card"
               style={{
-                margin: "15px",
+                margin: "8px",
                 borderRadius: "15px",
                 background: "rgba(30, 30, 50, 0.9)",
                 backdropFilter: "blur(15px)",
                 boxShadow: "0 6px 25px rgba(168, 153, 250, 0.7)",
-                transition: "transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out"
+                transition: "transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out",
+                minHeight: "100px"
               }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
@@ -60,22 +61,26 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.1, boxShadow: "0 10px 30px rgba(168, 153, 250, 0.9)" }}
             >
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center skill-content">
                 <motion.span
-                  style={{ fontSize: "2.5rem", marginRight: "15px", textShadow: "0 0 15px rgba(255, 255, 255, 0.6)" }}
+                  style={{
+                    fontSize: "2rem",
+                    marginRight: "10px",
+                    textShadow: "0 0 15px rgba(255, 255, 255, 0.6)"
+                  }}
                   initial={{ rotate: 0 }}
                   whileHover={{ rotate: 360, scale: 1.2 }}
                   transition={{ duration: 0.6 }}
                 >
                   {skill.icon}
                 </motion.span>
-                <h5 className="m-0" style={{ color: "#EEE", fontWeight: "bold" }}>{skill.name}</h5>
+                <h6 className="m-0" style={{ color: "#EEE", fontWeight: "bold" }}>{skill.name}</h6>
               </div>
 
               <div
-                className="progress"
+                className="progress skill-progress"
                 style={{
-                  height: "8px",
+                  height: "6px",
                   width: "50%",
                   background: "rgba(255, 255, 255, 0.4)",
                   borderRadius: "5px",
@@ -98,6 +103,31 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
+      {/* Mobile-specific styles */}
+      <style>
+        {`
+          @media (max-width: 576px) {
+            .skill-card {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              padding: 12px;
+              min-height: auto;
+            }
+
+            .skill-content {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .skill-progress {
+              width: 80%;
+              margin-top: 8px;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
