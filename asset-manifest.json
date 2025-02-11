@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Siyam-Portfolio/static/css/main.c07f35c9.css",
+    "main.js": "/Siyam-Portfolio/static/js/main.d8dc01fb.js",
+    "static/js/488.9561f9b8.chunk.js": "/Siyam-Portfolio/static/js/488.9561f9b8.chunk.js",
+    "static/media/portfolio image.jpg": "/Siyam-Portfolio/static/media/portfolio image.2a91c5b7f12c5ed6c0dc.jpg",
+    "static/media/Internship.pdf": "/Siyam-Portfolio/static/media/Internship.34b68bf0157a9ffbd6d2.pdf",
+    "static/media/Resume3.pdf": "/Siyam-Portfolio/static/media/Resume3.ac95df12383355f3230b.pdf",
+    "static/media/profile.jpg": "/Siyam-Portfolio/static/media/profile.7dfd35477710515d8eb5.jpg",
+    "index.html": "/Siyam-Portfolio/index.html",
+    "main.c07f35c9.css.map": "/Siyam-Portfolio/static/css/main.c07f35c9.css.map",
+    "main.d8dc01fb.js.map": "/Siyam-Portfolio/static/js/main.d8dc01fb.js.map",
+    "488.9561f9b8.chunk.js.map": "/Siyam-Portfolio/static/js/488.9561f9b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c07f35c9.css",
+    "static/js/main.d8dc01fb.js"
+  ]
+}
