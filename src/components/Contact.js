@@ -168,21 +168,26 @@ const sendEmail = (e) => {
       <style>{`
         .custom-input {
           background: rgba(50, 50, 100, 0.7);
-          color: white;
+          color: white !important;
+          caret-color: white;
           border: none;
           padding: 10px;
           border-radius: 8px;
           width: 100%;
           outline: none;
           transition: 0.3s;
-        }
+          }
+
         .custom-input::placeholder {
           color: rgba(200, 200, 255, 0.7);
         }
+
         .custom-input:focus {
           box-shadow: 0px 0px 15px #A899FA;
           background: rgba(50, 50, 100, 0.9);
+          color: white !important;
         }
+
         .custom-btn {
           background: linear-gradient(135deg, #A899FA, #6E45E2);
           color: white;
