@@ -165,7 +165,7 @@ const styles = {
   },
   downloadBtn: {
     display: "inline-block",
-    marginTop: "40px", // More space between fun facts and button
+    marginTop: "40px",
     padding: "12px 25px",
     fontSize: "1.2rem",
     fontWeight: "bold",
@@ -176,7 +176,11 @@ const styles = {
     textDecoration: "none",
     transition: "0.3s",
     boxShadow: "0px 5px 15px rgba(216, 180, 254, 0.6)",
-  },
+    whiteSpace: "nowrap", // Prevents text wrapping
+    textAlign: "center", // Ensures it remains centered
+    width: "max-content", // Ensures the button takes only necessary width
+    alignSelf: "center", // Centers it within flex containers if needed
+  },  
   profilePicContainer: {
     flex: "1",
     display: "flex",
@@ -202,8 +206,14 @@ const responsiveStyles = `
       text-align: center;
     }
     .profile-pic {
-      order: -1; /* Moves Profile Pic to Top */
+      order: -1;
       margin-bottom: 20px;
+    }
+    .download-btn {
+      display: inline-block;
+      text-align: center;
+      width: auto;
+      margin: 20px auto;
     }
   }
 `;
