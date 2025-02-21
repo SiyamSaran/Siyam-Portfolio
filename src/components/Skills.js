@@ -1,16 +1,18 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaReact, FaGithub, FaCloud, FaPython, FaDatabase, FaFileExcel } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaPython, FaGithub, FaDatabase, FaFileExcel, FaHtml5, FaRobot, FaBrain, FaChartBar } from "react-icons/fa";
 
 const skillsData = [
-  { id: 1, name: "React.js", icon: <FaReact color="#61DBFB" />, level: 90, color: "#00D8FF" },
-  { id: 2, name: "Excel", icon: <FaFileExcel color="#00aa00" />, level: 85, color: "#00aa00" },
-  { id: 3, name: "Git and GitHub", icon: <FaGithub color="#7952B3" />, level: 80, color: "#7952B3" },
-  { id: 4, name: "Python", icon: <FaPython color="#3776AB" />, level: 88, color: "#3776AB" },
-  { id: 5, name: "SQL & Databases", icon: <FaDatabase color="#F29111" />, level: 75, color: "#F29111" },
-  { id: 6, name: "Cloud Engineering", icon: <FaCloud color="#" />, level: 75, color: "#" }
+  { id: 1, name: "Data Science", icon: <FaChartBar color="#FF9800" />, level: 90, color: "#FFB74D" },  // Bright orange for analytics
+  { id: 2, name: "Python", icon: <FaPython color="#306998" />, level: 88, color: "#4B8BBE" },  // Deep blue for professional look
+  { id: 3, name: "Generative AI", icon: <FaRobot color="#8A2BE2" />, level: 80, color: "#A970FF" },  // Electric purple for futuristic AI
+  { id: 4, name: "SQL & Databases", icon: <FaDatabase color="#00C853" />, level: 75, color: "#66BB6A" },  // Green for structured data clarity
+  { id: 5, name: "Machine Learning", icon: <FaBrain color="#E91E63" />, level: 75, color: "#FF80AB" },  // Pink-red for innovation & deep learning
+  { id: 6, name: "HTML", icon: <FaHtml5 color="#FF5722" />, level: 75, color: "#FF8A65" }  // Vibrant red-orange for web dev
 ];
+
+
 
 const Skills = () => {
   return (

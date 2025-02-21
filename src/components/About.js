@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaProjectDiagram, FaTrophy, FaClock } from "react-icons/fa";
 import profile from "./profile.jpg";
 import { motion } from "framer-motion";
-import resume from "./Resume3.pdf";
+import resume from "./Siyam_Saran M Resume.pdf";
 
 const About = () => {
   const [projects] = useState(3);
@@ -62,7 +62,7 @@ const About = () => {
           </motion.div>
 
           {/* Download Resume Button */}
-          <motion.a href={resume} download="Your_Resume.pdf" style={styles.downloadBtn}>
+          <motion.a href={resume} download="Siyam Resume.pdf" style={styles.downloadBtn}>
             Download Resume
           </motion.a>
         </div>

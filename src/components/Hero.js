@@ -11,7 +11,7 @@ const Hero = () => {
     const hour = new Date().getHours();
     if (hour < 12) {
       setGreeting("Good Morning ☀️");
-    } else if (hour < 18) {
+    } else if (hour < 16) {
       setGreeting("Good Afternoon 🌤️");
     } else {
       setGreeting("Good Evening 🌙");
@@ -56,8 +56,8 @@ const Hero = () => {
           <Typewriter
             options={{
               strings: [
-                "Data Scientist 💻",
-                "React Developer ⚛️",
+                "Data Scientist 🔍📊",
+                "AI Engineer 🤖",
                 "Frontend Engineer 🎨",
                 "Tech Enthusiast 🚀",
               ],
